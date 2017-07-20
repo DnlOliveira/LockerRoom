@@ -54,17 +54,17 @@ class Display extends React.Component {
 
   render() {
     return(
-      <div className="row">
+      <div className="row" id="display">
 
-        <div className="col-md-2">
-          <img src={this.state.otherImages.img1} width='100' height='100' onClick={this.handleOnClick} /><br/>
-          <img src={this.state.otherImages.img2} width='100' height='100' onClick={this.handleOnClick} /><br/>
-          <img src={this.state.otherImages.img3} width='100' height='100' onClick={this.handleOnClick} /><br/>
-          <img src={this.state.otherImages.img4} width='100' height='100' onClick={this.handleOnClick} />
+        <div className="col-md-10" id="main-display">
+          <img src={this.state.imageOnDisplay} width='50%' />
         </div>
 
-        <div className="col-md-10">
-          <img src={this.state.imageOnDisplay} />
+        <div className="col-md-12" id="sec-display">
+          <img src={this.state.otherImages.img1} width='15%' onClick={this.handleOnClick} />
+          <img src={this.state.otherImages.img2} width='15%' onClick={this.handleOnClick} />
+          <img src={this.state.otherImages.img3} width='15%' onClick={this.handleOnClick} />
+          <img src={this.state.otherImages.img4} width='15%' onClick={this.handleOnClick} />
         </div>
 
       </div>

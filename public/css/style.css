@@ -1,4 +1,26 @@
 window,
 body {
-  background-color: #151314;
+  background-color: #ffffff;
+}
+
+.container {
+  width: 100%;
+}
+
+#tabs {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+#display {
+  display: block;
+  text-align: center;
+}
+#main-display{
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+#sec-display {
+  margin-top: 20px;
 }

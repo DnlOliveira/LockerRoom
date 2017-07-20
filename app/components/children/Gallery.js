@@ -58,16 +58,15 @@ class Gallery extends React.Component {
     console.log(set2);
 
     return(
-      <div className="container" id="gallery">
+      <div className="container">
 
         <div className="row">
 
           {this.state.galleryImages.map( (res, i) => {
             return (
-              <div className="col-md-3" id="images" key={i}>
-                <h5>{res.name}</h5>
+              <div className="col-sm-12 col-md-2 col-lg-1" style={styles.thumbnail} key={i}>
                 <a className="thumbnail" onClick={this.refs.child.updateImageOnDisplay}>
-                  <img src={res.img1} id={i} />
+                  <img src={res.img1} id={i} style={styles.img} />
                 </a>
               </div>
             );
@@ -78,7 +77,7 @@ class Gallery extends React.Component {
 
         <div className="row">
           <div className="col-md-12">
-            <Display ref='child' galleryImages={this.state.galleryImages}/>
+            <Display ref='child' galleryImages={this.state.galleryImages} />
           </div>
         </div>
 
@@ -86,5 +85,16 @@ class Gallery extends React.Component {
     );
   }
 }
+
+const styles = {
+  img: {
+    margin: 0,
+    width: '100%'
+  },
+  thumbnail: {
+    margin: 'auto',
+    width: '25%'
+  }
+};
 
 export default Gallery;
