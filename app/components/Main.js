@@ -25,7 +25,8 @@ class Main extends React.Component {
 const styles = {
   gallery: {
     borderStyle: 'solid',
-    margin: '0px'
+    margin: '20px',
+    borderRadius: '20px'
   }
 }
 

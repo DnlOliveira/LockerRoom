@@ -94,14 +94,12 @@ const styles = {
     width: '50%'
   },
   gallery: {
-    borderStyle: 'solid',
     margin: '50px',
     padding: '50px'
   },
   display: {
-    borderStyle: 'solid',
     width: '100%',
-    margin: '0px'
+    margin: '5px'
   }
 };
 

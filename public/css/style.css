@@ -1,6 +1,6 @@
 window,
 body {
-  background-color: #ffffff;
+  background-color: #000000;
 }
 
 .container {
@@ -23,4 +23,8 @@ body {
 }
 #sec-display {
   margin-top: 20px;
+}
+
+#gallery {
+  background: #ffffff;
 }
