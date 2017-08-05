@@ -39,10 +39,6 @@ class Gallery extends React.Component {
       });
   }
 
-  // handleClick(event) {
-  //   this.refs.child.updateImageOnDisplay(event.target.src);
-  // }
-
   render() {
     var sneakers = this.state.galleryImages;
     var set1 = [];
@@ -60,22 +56,24 @@ class Gallery extends React.Component {
     return(
       <div className="container">
 
-        <div className="row">
+        <div className="row" style={styles.gallery}>
+          <div className="col-md-12">
 
           {this.state.galleryImages.map( (res, i) => {
             return (
-              <div className="col-sm-12 col-md-2 col-lg-1" style={styles.thumbnail} key={i}>
+              <div className="col-md-6" style={styles.thumbnail} key={i}>
                 <a className="thumbnail" onClick={this.refs.child.updateImageOnDisplay}>
-                  <img src={res.img1} id={i} style={styles.img} />
+                  <img src={res.img1} id={i} name={res.name} style={styles.img} />
                 </a>
               </div>
             );
           })}
 
+          </div>
         </div>
 
 
-        <div className="row">
+        <div className="row" style={styles.display}>
           <div className="col-md-12">
             <Display ref='child' galleryImages={this.state.galleryImages} />
           </div>
@@ -93,7 +91,17 @@ const styles = {
   },
   thumbnail: {
     margin: 'auto',
-    width: '25%'
+    width: '50%'
+  },
+  gallery: {
+    borderStyle: 'solid',
+    margin: '50px',
+    padding: '50px'
+  },
+  display: {
+    borderStyle: 'solid',
+    width: '100%',
+    margin: '0px'
   }
 };
 

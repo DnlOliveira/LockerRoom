@@ -11,7 +11,8 @@ class Display extends React.Component {
 
     this.state = {
       imageOnDisplay: "",
-      otherImages: {}
+      otherImages: {},
+      imgName: ""
     };
 
   }//constructor
@@ -24,13 +25,12 @@ class Display extends React.Component {
         img2: this.props.galleryImages[0].img2,
         img3: this.props.galleryImages[0].img3,
         img4: this.props.galleryImages[0].img4
-      }
+      },
+      imgName: this.props.galleryImages[0].name
     });
   }
-
   updateImageOnDisplay(e) {
     var i = e.target.id;
-
     var images = {
       img1: this.props.galleryImages[i].img1,
       img2: this.props.galleryImages[i].img2,
@@ -40,7 +40,8 @@ class Display extends React.Component {
 
     this.setState( {
       imageOnDisplay: e.target.src,
-      otherImages: images
+      otherImages: images,
+      imgName: e.target.name
     }, () => {
       // console.log(this.state.otherImages.img1);
     });
@@ -57,14 +58,15 @@ class Display extends React.Component {
       <div className="row" id="display">
 
         <div className="col-md-10" id="main-display">
-          <img src={this.state.imageOnDisplay} width='50%' />
+          <h3>{this.state.imgName}</h3>
+          <img src={this.state.imageOnDisplay} width='75%' />
         </div>
 
         <div className="col-md-12" id="sec-display">
-          <img src={this.state.otherImages.img1} width='15%' onClick={this.handleOnClick} />
-          <img src={this.state.otherImages.img2} width='15%' onClick={this.handleOnClick} />
-          <img src={this.state.otherImages.img3} width='15%' onClick={this.handleOnClick} />
-          <img src={this.state.otherImages.img4} width='15%' onClick={this.handleOnClick} />
+          <img src={this.state.otherImages.img1} width='25%' onClick={this.handleOnClick} />
+          <img src={this.state.otherImages.img2} width='25%' onClick={this.handleOnClick} />
+          <img src={this.state.otherImages.img3} width='25%' onClick={this.handleOnClick} />
+          <img src={this.state.otherImages.img4} width='25%' onClick={this.handleOnClick} />
         </div>
 
       </div>
