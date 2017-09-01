@@ -9,6 +9,8 @@ router.get('/', (req, res) => {
   res.sendFile(__dirname + "../public/index.html");
 });
 
+
+
 //gets all images for gallery from db
 router.get('/api', (req, res) => {
 
@@ -36,11 +38,11 @@ router.get('/api', (req, res) => {
 
 });//get
 
+
+
 router.post("/api", (req, res) => {
   console.log(req.body);
 
-  // Here we'll save the location based on the JSON input.
-  // We'll use Date.now() to always get the current date time
   Sneaker.create({
     name: "WORKED",
     img1: "URL 1",

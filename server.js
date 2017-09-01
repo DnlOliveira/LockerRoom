@@ -50,34 +50,3 @@ db.on("error", function(err) {
 db.once("open", function() {
   console.log("Mongoose connection successful.");
 });
-//-------------------------------------------------//
-
-
-
-// app.get("/", function(req, res) {
-//   res.sendFile(__dirname + "./public/index.html");
-// });
-//
-// app.get('/api', function(req, res) {
-//
-//   Sneaker.find({}, function(err, doc) {
-//     if(err) {
-//       console.log(err);
-//     }else {
-//       var sneakers = [];
-//
-//       doc.forEach( function(sneaker) {
-//         sneakers.push({
-//           name: sneaker.name,
-//           img1: sneaker.img1,
-//           img2: sneaker.img2,
-//           img3: sneaker.img3,
-//           img4: sneaker.img4
-//         });//push
-//       });//forEach
-//       console.log(sneakers[0]);
-//       res.send(sneakers);
-//     }//else
-//   });//find
-//
-// });//get
